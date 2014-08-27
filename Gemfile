@@ -11,6 +11,7 @@ gem "builder", "3.0.0"
 gem "mime-types"
 gem "awesome_nested_set", "2.1.6"
 gem 'rails_12factor', group: :production
+gem 'pg'
 
 # Optional gem for LDAP authentication
 group :ldap do
