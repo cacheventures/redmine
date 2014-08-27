@@ -12,6 +12,7 @@ gem "mime-types"
 gem "awesome_nested_set", "2.1.6"
 gem 'rails_12factor', group: :production
 gem 'unicorn', group: :production
+gem 'aws-ses', :require => 'aws/ses'
 
 # Optional gem for LDAP authentication
 group :ldap do
