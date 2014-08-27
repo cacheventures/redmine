@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.0.0'
+
 gem "rails", "3.2.19"
 gem "rake", "~> 10.1.1"
 gem "jquery-rails", "~> 2.0.2"
@@ -8,6 +10,7 @@ gem "fastercsv", "~> 1.5.0", :platforms => [:mri_18, :mingw_18, :jruby]
 gem "builder", "3.0.0"
 gem "mime-types"
 gem "awesome_nested_set", "2.1.6"
+gem 'rails_12factor', group: :production
 
 # Optional gem for LDAP authentication
 group :ldap do

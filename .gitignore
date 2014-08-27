@@ -6,7 +6,6 @@
 /config/configuration.yml
 /config/database.yml
 /config/email.yml
-/config/initializers/session_store.rb
 /config/initializers/secret_token.rb
 /coverage
 /db/*.db
@@ -20,7 +19,6 @@
 /plugins/*
 !/plugins/README
 /public/dispatch.*
-/public/plugin_assets
 /public/themes/*
 !/public/themes/alternate
 !/public/themes/classic
@@ -37,6 +35,7 @@
 *.rbc
 
 /.bundle
-/Gemfile.lock
-/Gemfile.local
 
+.DS_Store
+.tags
+.tags_sorted_by_file
