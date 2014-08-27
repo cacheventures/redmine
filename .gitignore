@@ -3,7 +3,6 @@
 /.powrc
 /.rvmrc
 /config/additional_environment.rb
-/config/configuration.yml
 /config/email.yml
 /coverage
 /db/*.db
