@@ -118,7 +118,7 @@ h2 {
 	min-height: 0px;
 	/*padding: 8px 20px;
 	padding-bottom: 35px;*/
-  padding: 15px 15px 0 15px;
+  padding: 5px 15px 5px 15px;
 	color: #222;
 }
 
@@ -128,7 +128,7 @@ h2 {
 	font-weight: 700;
 	font-size: 13px;
 	letter-spacing: 1px;
-	padding: 17px 10px 30px 55px;
+	padding: 17px 10px 16px 55px;
   margin:0;
 }
 
