@@ -1,6 +1,16 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,400,600,700,300);
 @import url(../../../stylesheets/application.css);
 
 /* Circle Theme version 1.0.2, Copyright (C) 2014 Kirill Bezrukov www.redminecrm.com */
+
+*, a, a:hover, a:active, a:focus {
+    outline-style:none;
+    outline: 0;
+    //@include transition(all .15s ease-in-out);
+    -webkit-font-smoothing: subpixel-antialiased;
+    // text-rendering: optimizelegibility;
+    text-decoration:none;
+  }
 
 /**********************************************************/
 /* LOGO */
@@ -10,7 +20,7 @@
 	background: url(../images/logo.png) no-repeat 5px 5px;
 }
 
-@media only screen and (-webkit-min-device-pixel-ratio: 2),
+@media only screen and (-webkit-min-device-pix`el-ratio: 2),
 only screen and (min-device-pixel-ratio: 2) {
 	#header > h1 {
 		background-image: url(../images/logo2x.png);
@@ -23,10 +33,11 @@ only screen and (min-device-pixel-ratio: 2) {
 /**********************************************************/
 
 body {
-	color: #3d454c;
+	color: #222;
 	font-size: 14px;
 	line-height: 1.3;
-	font-family: "helvetica neue",helvetica,arial,sans-serif;
+	/*font-family: "helvetica neue",helvetica,arial,sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
 	font-smoothing: antialiased;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -34,12 +45,13 @@ body {
 }
 
 input, textarea, select {
-	font-family: "helvetica neue",helvetica,arial,sans-serif;
+	font-family: 'Open Sans', sans-serif;
+	/*font-family: "helvetica neue",helvetica,arial,sans-serif;*/
 	font-size: 12px;
 }
 
 a, a:link, a:visited {
-	color: #2996cc;
+	color: #67b300;
 }
 
 #main {
@@ -71,7 +83,7 @@ div#content {
 }
 
 #footer a:hover {
-	color: #2996cc;
+	color: #67b300;
 	text-decoration: none;
 }
 
@@ -98,7 +110,7 @@ h2 {
 
 #sidebar a.selected {
 	background-color: #fafafa;
-	color: #3d454c;
+	color: #222;
 	line-height: inherit;
 	padding: inherit;
 	margin-left: inherit;
@@ -109,14 +121,16 @@ h2 {
 /**********************************************************/
 
 #header {
-	background-color: #29333a;
+	background-color: #eee;
 	min-height: 0px;
 	padding: 8px 20px;
 	padding-bottom: 35px;
+	color: #222;
 }
 
 #header > h1 {
-	font-family: "helvetica neue",helvetica,arial,sans-serif;
+	/*font-family: "helvetica neue",helvetica,arial,sans-serif;*/
+	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	font-weight: 700;
 	font-size: 13px;
@@ -129,11 +143,11 @@ h2 {
 }
 
 /**********************************************************/
-/* TOP-MENU */
+/*  */
 /**********************************************************/
 #top-menu {
-	background: #000;
-	padding: 7px 20px 2px 25px;
+	background: #222;
+	padding: 9px 20px 2px 25px;
  	font-size: 0.9em;
 }
 
@@ -155,7 +169,7 @@ h2 {
 	left: 0px;
 	width: 100%;
 	height: 51px;
-	background-color: #3d454c;
+	background-color: #222;
 	font-weight: 500;
 	overflow: hidden;
 }
@@ -171,6 +185,7 @@ h2 {
 
 #main-menu li > a {
 	color: #9da2a6;
+	font-weight: 500;
 }
 
 
@@ -315,7 +330,7 @@ div#content .contacts-tags-edit ul.tagit {
 /* Context Menu */
 /**********************************************************/
 div#content .context-menu-selection {
-	background-color: #2996cc !important;
+	background-color: #67b300 !important;
 }
 
 div#content #context-menu ul {
@@ -328,7 +343,7 @@ div#content #context-menu li a {
 
 div#content #context-menu li:hover {
 	background: #f2f4f5;
-	color: #3d454c;
+	color: #222;
 	border: 1px solid #f2f4f5;
 	border-radius: 0px;
 }
@@ -373,11 +388,11 @@ div.modal {
 
 .ui-dialog.modal .ui-widget-header {
 	border: 0px;
-	color: #3d454c;
+	color: #222;
 	background: #fafafa;
 	padding-top: 18px;
 	padding-bottom: 18px;
-	color: #3d454c;
+	color: #222;
 	font-size: 24px;
 	font-weight: normal;
 	text-align: center;
@@ -410,13 +425,13 @@ div.modal {
 .ui-widget-content .ui-state-focus,
 .ui-widget-header .ui-state-focus {
 	background: #f2f4f5;
-	color: #3d454c;
+	color: #222;
 	border: 1px solid #f2f4f5;
 	border-radius: 0px;
 }
 
 .ui-widget-header .ui-datepicker-title {
-	color: #3d454c;
+	color: #222;
 }
 
 .ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
@@ -552,7 +567,7 @@ input[type="submit"].button-small {
 #ajax-modal p.buttons input[type="submit"],
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-close,
 input[type="submit"] {
-	background: #2996cc;
+	background: #67b300;
 	border-color: transparent;
 	color: #fff;
 }
@@ -560,7 +575,7 @@ input[type="submit"] {
 #ajax-modal p.buttons input[type="submit"]:hover,
 .ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-close.ui-state-hover,
 input[type="submit"]:hover {
-	background: #3ba8de;
+	background: #74c605;
 	color: #fff;
 }
 
@@ -575,7 +590,7 @@ input[type="submit"].button-small:hover {
 	-webkit-box-shadow: rgba(0,0,0,0.08) 0 1px 1px;
 	-moz-box-shadow: rgba(0,0,0,0.08) 0 1px 1px;
 	box-shadow: rgba(0,0,0,0.08) 0 1px 1px;
-	color: #3d454c;
+	color: #222;
 	-webkit-transition-duration: 0.05s;
 	-moz-transition-duration: 0.05s;
 	-o-transition-duration: 0.05s;
@@ -602,7 +617,7 @@ input[type="password"],
 fieldset#filters td.values input {
 	padding: 1px 10px;
 	background-color: #fff;
-	color: #3d454c;
+	color: #222;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
@@ -617,7 +632,7 @@ input[type="password"]:focus,
 select:focus,
 textarea:focus,
 fieldset#filters td.values input:focus {
-	border-color:#2996cc;
+	border-color:#67b300;
 	outline: none;
 }
 
@@ -637,7 +652,7 @@ select {
 	z-index: 1;
 	padding: 4px 30px 4px 10px;
 	background-color: #fff;
-	color: #3d454c;
+	color: #222;
 	cursor: pointer;
 	border: 1px solid #e0e2e3;
 	background: url(../images/select.png) no-repeat right #fff;
@@ -686,7 +701,7 @@ select[multiple="multiple"] {
 
 textarea {
 	background-color: #fff;
-	color: #3d454c;
+	color: #222;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;

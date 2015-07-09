@@ -5,15 +5,15 @@ production:
   endpoint:
   secure: true
   private: true
-  expires: 
+  expires:
   proxy:
 
 development:
-  access_key_id: 
-  secret_access_key: 
-  bucket: 
+  access_key_id: <%= ENV['aws_access_key_id'] %>
+  secret_access_key: <%= ENV['aws_secret_access_key'] %>
+  bucket: cv-red-dev
   endpoint:
-  secure:
-  private:
-  expires: 
+  secure: true
+  private: true
+  expires:
   proxy:

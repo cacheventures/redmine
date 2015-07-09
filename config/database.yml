@@ -66,11 +66,11 @@
 #  password: jenkins
 
 development:
-  adapter: postegresql
+  adapter: postgresql
   encoding: unicode
   database: redmine_development
   pool: 5
-  username: redmine
+  username:
   password:
 
 production:
@@ -79,4 +79,4 @@ production:
   database: redmine
   pool: 5
   username: indietro
-  password: 
+  password:
