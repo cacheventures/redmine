@@ -6,10 +6,7 @@
 *, a, a:hover, a:active, a:focus {
     outline-style:none;
     outline: 0;
-    //@include transition(all .15s ease-in-out);
     -webkit-font-smoothing: subpixel-antialiased;
-    // text-rendering: optimizelegibility;
-    text-decoration:none;
   }
 
 /**********************************************************/
