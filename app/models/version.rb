@@ -41,10 +41,10 @@ class Version < ActiveRecord::Base
   }
 
   after_create do
-    description = name
-    version = name
+    self.description = name
+    self.version = name
     version_string = version.gsub('.', '')
-    wiki_page_title = version_string
+    self.wiki_page_title = version_string
     save
 
     wiki = project.wiki
