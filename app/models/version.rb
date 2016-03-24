@@ -42,9 +42,13 @@ class Version < ActiveRecord::Base
 
   after_create do
     self.description = name
-    self.version = name
+    version = name
     version_string = version.gsub('.', '')
     self.wiki_page_title = version_string
+    last_version = project.versions.first
+    if last_version && last_version.effective_date
+      self.effective_date = last_version.effective_date + 1.week
+    end
     save
 
     wiki = project.wiki
@@ -60,10 +64,10 @@ class Version < ActiveRecord::Base
     page.save
 
     main_page = wiki.pages.where(title: 'Wiki').first
+    return unless main_page.present?
     lines = main_page.content.text.split("\n")
-    last_version = project.versions.second.try(:name)
     lines.map! do |line|
-      if last_version && line.include?(last_version)
+      if last_version && line.include?(last_version.name)
         line << "\n-   [[#{version}]]"
       end
       line
