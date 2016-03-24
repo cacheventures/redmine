@@ -40,6 +40,38 @@ class Version < ActiveRecord::Base
     includes(:project).where(Project.allowed_to_condition(args.first || User.current, :view_issues))
   }
 
+  after_create do
+    description = name
+    version = name
+    version_string = version.gsub('.', '')
+    wiki_page_title = version_string
+    save
+
+    wiki = project.wiki
+    return if wiki.pages.where(title: version).first.present?
+    page = wiki.pages.create(title: version)
+
+    content = page.create_content
+    content.text = "[[#{version_string}|Release #{version}]]\n"\
+                   "===\n\n"\
+                   "### Notes\n\n"\
+                   "### Deploy Notes\n\n"\
+                   "### Hotfixes"
+    page.save
+
+    main_page = wiki.pages.where(title: 'Wiki').first
+    lines = main_page.content.text.split("\n")
+    last_version = project.versions.second.try(:name)
+    lines.map! do |line|
+      if last_version && line.include?(last_version)
+        line << "\n-   [[#{version}]]"
+      end
+      line
+    end
+    main_page.content.text = lines.join("\n")
+    main_page.content.save
+  end
+
   safe_attributes 'name',
     'description',
     'effective_date',
