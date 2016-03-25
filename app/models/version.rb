@@ -45,7 +45,7 @@ class Version < ActiveRecord::Base
     version = name
     version_string = version.gsub('.', '')
     self.wiki_page_title = version_string
-    last_version = project.versions.first
+    last_version = project.versions.second
     if last_version && last_version.effective_date
       self.effective_date = last_version.effective_date + 1.week
     end
