@@ -1,0 +1,6 @@
+[submodule "plugins/redmine_mentions"]
+	path = plugins/redmine_mentions
+	url = git@github.com:arkhitech/redmine_mentions.git
+[submodule "plugins/redmine_silencer"]
+	path = plugins/redmine_silencer
+	url = git@github.com:paginagmbh/redmine_silencer.git
