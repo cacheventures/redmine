@@ -1,0 +1,5 @@
+production:
+  rails:
+    configuration:
+      ruby_version: 2.4.1
+      do_initial_db_schema_load: true
