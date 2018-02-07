@@ -19,6 +19,10 @@ gem "roadie-rails", "~> 1.1.1"
 gem "roadie", "~> 3.2.1"
 gem "mimemagic"
 gem 'aws-ses'
+gem 'unicorn', group: :production
+gem 'aws-ses', :require => 'aws/ses'
+gem 'newrelic_rpm'
+gem 'pry'
 
 gem "nokogiri", (RUBY_VERSION >= "2.1" ? "~> 1.8.1" : "~> 1.6.8")
 gem "i18n", "~> 0.7.0"
@@ -89,6 +93,7 @@ end
 group :development do
   gem "rdoc", "~> 4.3"
   gem "yard"
+  gem 'figaro'
 end
 
 group :test do

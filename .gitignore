@@ -1,15 +1,9 @@
 /.project
-/.idea
 /.loadpath
 /.powrc
 /.rvmrc
 /config/additional_environment.rb
-#/config/configuration.yml
-#/config/database.yml
 /config/email.yml
-#/config/secrets.yml
-#/config/initializers/session_store.rb
-#/config/initializers/secret_token.rb
 /coverage
 /db/*.db
 /db/*.sqlite3
@@ -19,14 +13,12 @@
 /lib/redmine/scm/adapters/mercurial/redminehelper.pyo
 /log/*.log*
 /log/mongrel_debug
-#/plugins/*
-!/plugins/README
 /public/dispatch.*
-/public/plugin_assets/*
-#/public/themes/*
+/public/themes/*
 !/public/themes/alternate
 !/public/themes/classic
 !/public/themes/README
+!/public/themes/circle
 /tmp/*
 /tmp/cache/*
 /tmp/pdf/*
@@ -35,9 +27,12 @@
 /tmp/test/*
 /tmp/thumbnails/*
 /vendor/cache
+/vendor/rails
 *.rbc
 
 /.bundle
-/Gemfile.lock
-/Gemfile.local
 
+.DS_Store
+.tags
+.tags_sorted_by_file
+/config/application.yml
